@@ -1,0 +1,46 @@
+.web-body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.outer-box {
+    display: flex;
+    background-color: hsl(225, 100%, 100%);
+    width: 80%;
+    height: 60%;
+}
+
+.box-1 {
+    width: 50%;
+    overflow: hidden;
+}
+
+.img-box {
+    position: relative;
+    bottom: 850px;
+    right: 85px;
+    z-index: 1;
+    overflow: visible;
+}
+
+.img-pattern {
+    position: relative;
+    right: 500px;
+    bottom: 260px; 
+}
+
+.img-woman {
+    position: relative;
+    bottom: 850px;
+    right: 85px;
+}
+
+.box-2 {
+    width: 50%;
+}
