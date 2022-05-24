@@ -12,8 +12,9 @@
 .outer-box {
     display: flex;
     background-color: hsl(225, 100%, 100%);
-    width: 80%;
-    height: 60%;
+    width: 75%;
+    height: 50%;
+    position: relative;
 }
 
 .box-1 {
@@ -21,24 +22,31 @@
     overflow: hidden;
 }
 
-.img-box {
-    position: relative;
-    bottom: 850px;
-    right: 85px;
-    z-index: 1;
-    overflow: visible;
-}
-
 .img-pattern {
     position: relative;
-    right: 500px;
-    bottom: 260px; 
+    height: 1000px;
+    width: 1000px;
+    right: 578px;
+    bottom: 300px;
+    background: url(./images/bg-pattern-desktop.svg) no-repeat;
 }
 
 .img-woman {
     position: relative;
-    bottom: 850px;
-    right: 85px;
+    height: 400px;
+    width: 500px;
+    bottom: 940px;
+    right: 83px;
+    background: url(./images/illustration-woman-online-desktop.svg) no-repeat;
+}
+
+.img-box {
+    position: absolute;
+    height: 40%;
+    width: 30%;
+    top: 190px;
+    left: -92px;
+    background: url(./images/illustration-box-desktop.svg) no-repeat;
 }
 
 .box-2 {
