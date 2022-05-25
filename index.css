@@ -91,7 +91,7 @@
     overflow: hidden;
     transition: 0.5s;
     height: 0;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .content-p {
