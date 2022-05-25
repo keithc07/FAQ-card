@@ -22,55 +22,45 @@
       <div class="box-2">
         <h1>FAQ</h1>
 
-        <details class="details">
-          <summary>
-            <span class="question">How many team members can I invite?</span>
-            <div class="summary-chevron-down-1">
-              <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
-            </div>
-          </summary>
-          <p class="content">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
-          <div class="summary-chevron-up-1">
-            <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+        <div class="details">
+          <div class="question-box">
+            <p class="question">How many team members can I invite?</p>
+            <img class="chevron" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
           </div>
-        </details>
+          <div class="content">
+            <p class="content-p">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+          </div>
+        </div>
 
-        <details class="details">
-          <summary>
-            <span class="question">What is the maximum file upload size?</span>
-            <div class="summary-chevron-down-2">
-              <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
-            </div>
-          </summary>
-          <p class="content">No more than 2GB. All files in your account must fit your allotted storage space.</p>
-          <div class="summary-chevron-up-2">
-            <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+        <div class="details">
+          <div class="question-box">
+            <p class="question">What is the maximum file upload size?</p>
+            <img class="chevron" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
           </div>
-        </details>
+          <div class="content">
+            <p class="content-p">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </div>
 
-        <details class="details">
-          <summary>
-            <span class="question">How do I reset my password?</span>
-            <div class="summary-chevron-down-3">
-              <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
-            </div>
-          </summary>
-          <p class="content">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
-          <div class="summary-chevron-up-3">
-            <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+        <div class="details">
+          <div class="question-box">
+            <p class="question">How do I reset my password?</p>
+            <img class="chevron" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
           </div>
-        </details>
+          <div class="content">
+            <p class="content-p">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+          </div>
+        </div>
 
-        <details class="details">
-            <span class="question">Can I cancel my subscription?</span>
-            <div class="summary-chevron-down-4">
-              <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
-            </div>
-          <p class="content">Yes! Send us a message and we'll process your request no questions asked.</p>
-          <div class="summary-chevron-up-4">
-            <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+        <div class="details">
+          <div class="question-box">
+            <p class="question">Can I cancel my subscription?</p>
+            <img class="chevron" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
           </div>
-        </details>
+          <div class="content">
+            <p class="content-p">Yes! Send us a message and we'll process your request no questions asked.</p>
+          </div>
+        </div>
 
         <div class="details">
           <div class="question-box">
@@ -78,7 +68,7 @@
             <img class="chevron" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
           </div>
           <div class="content">
-            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            <p class="content-p">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
           </div>
         </div>
 
@@ -86,14 +76,25 @@
     </div>
     <script>
       const detail = document.getElementsByClassName("details");
-      console.log(detail)
+      console.log(detail[0].classList)
 
+      for (var i = 0; i < detail.length; i++) {
+        detail[i].onclick = function() {
+          var setClasses = !this.classList.contains('active');
+          setClass(detail, 'active', 'remove');
 
-      for ( i = 0; i < detail.length; i++) {
-        detail[i].addEventListener('click', function(){
-          this.classList.toggle('active')
-        })
+          if (setClasses) {
+            this.classList.toggle("active");
+          }
+        }
+      } 
+
+      function setClass(els, className, fnName) {
+          for (var i = 0; i < els.length; i++) {
+              els[i].classList[fnName](className);
+          }
       }
+
     </script>
   </body>
 </html>
