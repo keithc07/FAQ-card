@@ -22,7 +22,7 @@
 
 .box-1 {
     width: 50%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .img-pattern {
@@ -127,6 +127,7 @@
     .box-1 {
         height: 15%;
         width: 94%;
+        overflow: unset;
     }
     .box-2 {
         height: 70%;
