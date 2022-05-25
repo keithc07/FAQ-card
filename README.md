@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://github.com/keithc07/FAQ-card
+- Live Site URL: https://faq-accordian-practice.netlify.app/
 
 ## My process
 
