@@ -25,37 +25,75 @@
         <details class="details">
           <summary>
             <span class="question">How many team members can I invite?</span>
-            <div class="summary-chevron-down">
+            <div class="summary-chevron-down-1">
               <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
             </div>
           </summary>
           <p class="content">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
-          <div class="summary-chevron-up">
+          <div class="summary-chevron-up-1">
             <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
           </div>
         </details>
 
-        <details>
-          <summary>What is the maximum file upload size?</summary>
-          <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        <details class="details">
+          <summary>
+            <span class="question">What is the maximum file upload size?</span>
+            <div class="summary-chevron-down-2">
+              <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+            </div>
+          </summary>
+          <p class="content">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          <div class="summary-chevron-up-2">
+            <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+          </div>
         </details>
 
-        <details>
-          <summary>How do I reset my password?</summary>
-          <p>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+        <details class="details">
+          <summary>
+            <span class="question">How do I reset my password?</span>
+            <div class="summary-chevron-down-3">
+              <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+            </div>
+          </summary>
+          <p class="content">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+          <div class="summary-chevron-up-3">
+            <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+          </div>
         </details>
 
-        <details>
-          <summary>Can I cancel my subscription?</summary>
-          <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+        <details class="details">
+            <span class="question">Can I cancel my subscription?</span>
+            <div class="summary-chevron-down-4">
+              <img src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+            </div>
+          <p class="content">Yes! Send us a message and we'll process your request no questions asked.</p>
+          <div class="summary-chevron-up-4">
+            <img class="chevron-image" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+          </div>
         </details>
 
-        <details>
-          <summary>Do you provide additional support?</summary>
-          <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-        </details>
+        <div class="details">
+          <div class="question-box">
+            <p class="question">Do you provide additional support?</p>
+            <img class="chevron" src="./images/icon-arrow-down.svg" alt="chevron-image"/>
+          </div>
+          <div class="content">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </div>
 
       </div>
     </div>
+    <script>
+      const detail = document.getElementsByClassName("details");
+      console.log(detail)
+
+
+      for ( i = 0; i < detail.length; i++) {
+        detail[i].addEventListener('click', function(){
+          this.classList.toggle('active')
+        })
+      }
+    </script>
   </body>
 </html>

@@ -60,19 +60,8 @@
 .details {
     cursor: pointer;
     width: 80%;
-}
-
-.question:hover {
-    color: hsl(14, 88%, 65%);
-}
-
-.summary-chevron-up,
-.summary-chevron-down {
-    pointer-events: none;
-    position: absolute;
-    top: 110px;
-    right: 120px;
-    background: #ffffff;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding: 12px 0px;
 }
 
 summary {
@@ -83,21 +72,91 @@ summary:hover .chevron-image {
     transform: rotate(180deg)
 }
 
-.chevron-image {
-    transform: rotate(180deg)
+.summary-chevron-up-1,
+.summary-chevron-down-1 {
+    pointer-events: none;
+    position: absolute;
+    top: 122px;
+    right: 135px;
+    background: #ffffff;
 }
 
-.question {
-    user-select: none;
-    font-weight: 400;
+.summary-chevron-up-2,
+.summary-chevron-down-2 {
+    pointer-events: none;
+    position: absolute;
+    top: 168px;
+    right: 135px;
+    background: #ffffff;
+}
+
+.summary-chevron-up-3,
+.summary-chevron-down-3 {
+    pointer-events: none;
+    position: absolute;
+    top: 213px;
+    right: 135px;
+    background: #ffffff;
+}
+
+.summary-chevron-up-4,
+.summary-chevron-down-4 {
+    pointer-events: none;
+    position: absolute;
+    top: 257px;
+    right: 135px;
+    background: #ffffff;
+}
+
+.chevron-image {
+    transform: rotate(180deg)
 }
 
 details[open] .question {
     font-weight: bold;
 }
 
+.question-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question {
+    font-weight: 400;
+}
+
+.question:hover {
+    color: hsl(14, 88%, 65%);
+}
+
 .content {
+    position: relative;
     font-size: 12px;
     color: hsl(240, 6%, 50%);
+    overflow: hidden;
+    transition: 0.5s;
+    height: 0;
+    overflow-y: auto;
 }
+
+.chevron {
+    position: relative;
+    height: 7px;
+    width: 10px;
+    top: 23px;
+}
+
+.details.active .content {
+    height: auto;
+}
+
+.details.active .question {
+    font-weight: 700;
+}
+
+.details.active .chevron {
+    transform: rotate(180deg);
+}
+
+
 
